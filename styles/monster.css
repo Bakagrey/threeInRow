@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     position: absolute;
     transition: left linear 0.5s, top linear 0.5s;
+    animation: jump 1s infinite both;
 }
 .monster.dragged{
     animation: rotation 1s infinite;
@@ -16,5 +17,16 @@
     }
     to{
         transform: rotate(360deg);
+    }
+}
+@keyframes jump{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(4px);
+    }
+    100%{
+        transform: translateY(0px);
     }
 }
