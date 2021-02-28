@@ -45,7 +45,8 @@ class Monster {
             return;
         console.log(arrayIdx);
         for(let i = 0; i< arrayIdx.length;i++){
-            //clearInterval(this.interval) 
+            console.log(currentMonsters[arrayIdx[i]].interval)
+            clearInterval(currentMonsters[arrayIdx[i]].interval) 
             currentMonsters[arrayIdx[i]].monsterHtml.style.backgroundImage =`url(./img/monsters/${this.folder}.png)`;
             setTimeout(()=>{
                 currentMonsters[arrayIdx[i]].monsterHtml.remove();
@@ -90,7 +91,7 @@ class Monster {
         this.monsterHtml.style.top =`${this.top}px`;
         this.monsterHtml.style.left =`${this.left}px`;
         this.monsterHtml.setAttribute('draggable', true)
-        setInterval(()=>{
+        this.interval = setInterval(()=>{
             this.monsterHtml.style.backgroundImage =`url(./img/monsters/${this.folder}_${this.getMonsterFrame()}.png)`;            
         },1700);
         this.monsterHtml.addEventListener('dragstart',this.dragMonster);   
