@@ -1,0 +1,37 @@
+@import './monster.css';
+@font-face {
+    font-family: pockemonFont;
+    src: url(../fonts/Pokemon\ Solid.ttf);
+  }
+  
+html, body{
+    margin: 0;
+    height: 100%;
+}
+.game-wrapper{
+    height: calc(100% - 60px);
+
+    background-size: cover;
+    padding: 30px;
+    font-family: pockemonFont;
+}
+.game-logo{
+    text-align: center;
+    -webkit-text-stroke: 2px black; /* width and color */
+    font-size: 40px;
+    color: #f1f182;
+    text-shadow: 5px 3px 6px #3d4b9e;
+}
+.cell{
+    width: 90px; height: 90px;
+}
+.game-board{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
